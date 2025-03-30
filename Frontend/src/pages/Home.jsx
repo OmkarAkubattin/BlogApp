@@ -4,6 +4,7 @@ import axios from "axios";
 
 function Home() {
   const [blogs, setBlogs] = useState([]);
+  let updatedAt = [];
 
   function formatDate(isoString) {
     const date = new Date(isoString);
@@ -14,7 +15,8 @@ function Home() {
     const month = date.getUTCMonth() + 1; // Months are 0-based
     const year = String(date.getUTCFullYear()).slice(2); // Get last 2 digits of year
 
-    return `${hours}:${minutes} ${day}-${month}-${year}`;
+    updatedAt.push(`${hours}:${minutes}`)
+    updatedAt.push(`${day}-${month}-${year}`)
   }
 
   useEffect(() => {
@@ -42,13 +44,15 @@ function Home() {
               >
                 <h2 className="text-2xl font-semibold text-gray-800">
                   {blog.title}
-                  <span className="text-right">{formatDate(blog.updatedAt)}</span>
                 </h2>
                 <p className="text-gray-600 mt-2">
                   {blog.content.substring(0, 150)}...
                 </p>
                 <p className="text-gray-600 mt-2">
                   Author : @{blog.author.name}
+                  {formatDate(blog.updatedAt)}
+                  Time : {updatedAt[0]}
+                  Date : {updatedAt[1]}
                 </p>
                 <Link
                   to={`/blog/${blog._id}`}
