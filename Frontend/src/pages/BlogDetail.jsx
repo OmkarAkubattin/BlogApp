@@ -50,6 +50,7 @@ function BlogDetail() {
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
       <div className="w-full max-w-3xl bg-white p-8 rounded-lg shadow-md">
+      <img className="object-fill h-full w-full" src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="" />
         <h1 className="text-4xl font-bold text-gray-800">{blog.title}</h1>
         <p className="mt-4 text-gray-600">{blog.content}</p>
         {console.log(blog.author)}
