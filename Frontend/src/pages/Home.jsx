@@ -6,7 +6,7 @@ function Home() {
   const [blogs, setBlogs] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/blogs")
+    axios.get(`${import.meta.env.VITE_BASE_URL}/api/blogs`)
       .then(response => setBlogs(response.data))
       .catch(error => console.error("Error fetching blogs:", error));
   }, []);

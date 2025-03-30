@@ -10,7 +10,7 @@ function EditBlog() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/blogs/${id}`)
+    axios.get(`${import.meta.env.VITE_BASE_URL}/api/blogs/${id}`)
       .then(response => {
         setTitle(response.data.title);
         setContent(response.data.content);

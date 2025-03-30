@@ -12,7 +12,7 @@ function BlogDetail() {
   const userId = localStorage.getItem("userId"); // Store userId when logging in
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/blogs/${id}`)
+    axios.get(`${import.meta.env.VITE_BASE_URL}/api/blogs/${id}`)
       .then(response => {
         setBlog(response.data);
         setLoading(false);
@@ -27,7 +27,7 @@ function BlogDetail() {
     const token = localStorage.getItem("token");
   
     try {
-      await axios.delete(`http://localhost:5000/api/blogs/${id}`, {
+      await axios.delete(`${import.meta.env.VITE_BASE_URL}/api/blogs/${id}`, {
         headers: { Authorization: `Bearer ${token}` },
       });
   
