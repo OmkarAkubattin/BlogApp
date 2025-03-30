@@ -1,4 +1,4 @@
-# Blog for Ominfy - Backend
+# Blog for Ominfy
 
 This is the backend for the Blog application. It provides APIs for user authentication, blog management, and more.
 
