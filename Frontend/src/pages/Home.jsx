@@ -15,8 +15,8 @@ function Home() {
     const month = date.getUTCMonth() + 1; // Months are 0-based
     const year = String(date.getUTCFullYear()).slice(2); // Get last 2 digits of year
 
-    updatedAt.push(`${hours}:${minutes}`)
-    updatedAt.push(`${day}-${month}-${year}`)
+    updatedAt.push(`${hours}:${minutes}`);
+    updatedAt.push(`${day}-${month}-${year}`);
   }
 
   useEffect(() => {
@@ -42,6 +42,7 @@ function Home() {
                 key={blog._id}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
               >
+                <img className="h-20" src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="" />
                 <h2 className="text-2xl font-semibold text-gray-800">
                   {blog.title}
                 </h2>
@@ -50,9 +51,12 @@ function Home() {
                 </p>
                 <p className="text-gray-600 mt-2">
                   Author : @{blog.author.name}
+                  <br />
                   {formatDate(blog.updatedAt)}
                   Time : {updatedAt[0]}
+                  <br />
                   Date : {updatedAt[1]}
+                  <br />
                 </p>
                 <Link
                   to={`/blog/${blog._id}`}
