@@ -10,7 +10,7 @@ function EditBlog() {
   const token = localStorage.getItem("token");
 
   useEffect(() => {
-    axios.get(`${import.meta.env.VITE_BASE_URL}/api/blogs/${id}`)
+    axios.get(`${import.meta.env.VITE_BASE_URL}/blogs/${id}`)
       .then(response => {
         setTitle(response.data.title);
         setContent(response.data.content);
@@ -21,7 +21,7 @@ function EditBlog() {
   const handleUpdate = async (e) => {
     e.preventDefault();
     try {
-      await axios.put(`http://localhost:5000/api/blogs/${id}`, { title, content }, {
+      await axios.put(`${import.meta.env.VITE_BASE_URL}/blogs/${id}`, { title, content }, {
         headers: { Authorization: `Bearer ${token}` }
       });
       alert("Blog updated successfully");

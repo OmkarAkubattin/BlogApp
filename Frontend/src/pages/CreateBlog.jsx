@@ -11,7 +11,7 @@ function CreateBlog() {
     setLoading(true);
     try {
       await axios.post(
-        `${import.meta.env.VITE_BASE_URL}/api/blogs`,
+        `${import.meta.env.VITE_BASE_URL}/blogs`,
         { title, content },
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },
