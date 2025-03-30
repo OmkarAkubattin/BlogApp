@@ -34,6 +34,11 @@ This is the backend for the Blog application. It provides APIs for user authenti
    ```
 
    The server will run on `http://localhost:5000` by default.
+   
+## Deployment
+
+- **Frontend**: [https://blog-app-one-tau-34.vercel.app](https://blog-app-one-tau-34.vercel.app)
+- **Backend**: [https://blogapp-production-ba6b.up.railway.app](https://blogapp-production-ba6b.up.railway.app)
 
 ## API Routes
 
