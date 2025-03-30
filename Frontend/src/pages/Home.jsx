@@ -56,7 +56,6 @@ function Home() {
                   Time : {updatedAt[0]}
                   <br />
                   Date : {updatedAt[1]}
-                  <br />
                 </p>
                 <Link
                   to={`/blog/${blog._id}`}
