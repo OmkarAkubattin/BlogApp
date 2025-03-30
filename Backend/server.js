@@ -12,7 +12,7 @@ const app = express();
 
 app.use(express.json());
 app.use(cors({
-  origin: "https://blog-yvzoqwchk-omkarakubattins.vercel.app", // Frontend URL
+  origin: "https://blog-app-one-tau-34.vercel.app", // Frontend URL
   credentials: true,
 }));
 app.use(cookieParser());
