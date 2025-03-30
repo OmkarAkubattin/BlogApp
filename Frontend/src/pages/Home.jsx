@@ -42,7 +42,7 @@ function Home() {
                 key={blog._id}
                 className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300"
               >
-                <img className="object-cover" src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="" />
+                <img className="object-cover h-full w-full" src="https://img.freepik.com/free-photo/online-message-blog-chat-communication-envelop-graphic-icon-concept_53876-139717.jpg" alt="" />
                 <h2 className="text-2xl font-semibold text-gray-800">
                   {blog.title}
                 </h2>
